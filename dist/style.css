@@ -1,0 +1,346 @@
+.wrapper li{
+    list-style: none;
+    background-color: #fff;
+    height: 250px;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+    
+}
+
+
+
+
+
+.wrapper .note
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.add-box::before
+{
+    height: 90%;
+    width: 90%;
+    margin-bottom: 20px;
+    content: "";
+  position: absolute;
+    border:#88ABFF 3px solid  ;
+}
+
+.add-box .icon
+{
+    
+    height: 88px;
+    width: 88px;
+    border-radius: 50%;
+    color: #88ABFF;
+    justify-content: center;
+    border: 2px dashed #88ABFF;
+
+
+
+}
+
+
+
+.add-box  .icon
+{
+    animation: rotate 3s linear infinite;
+    transform-origin: center center;
+
+
+}
+
+
+@keyframes rotate {
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+.add-box .icon i{
+    font-size: 57px;
+    line-height: 1rem;
+
+}
+.icon,.bottom-content,.add-box,.content header
+
+
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    
+    margin-top: 20px;
+    
+}
+
+.note .details
+{
+    max-width: 100%;
+    overflow: auto;
+
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500;
+    
+
+
+
+}
+
+.note span{
+    color: #575757;
+    display: block;
+    font-size: 16px;
+margin-top: 5px;
+
+
+
+    
+}
+
+.note .bottom-content
+{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 7em;
+    
+}
+
+
+
+
+.bottom-content span
+{
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.bottom-content .settings i
+{
+color:#1fc5bd;
+cursor: pointer;
+font-size: 20px;
+
+}
+
+.settings
+{
+    position: relative;
+    
+}
+.settings .menu li
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 15px;
+    border-radius: 0;
+    justify-content: flex-start;
+    background-color: rgba(182, 177, 29, 0.738);
+
+    
+   
+
+
+ 
+}
+
+
+
+.menu li i{
+    padding-right: 8px;
+    
+
+}
+
+.menu li:hover
+{
+    background-color: crimson;
+    cursor: pointer;
+    
+}
+
+
+.settings .menu 
+{
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+
+    box-shadow: 0 0 6px rgb(0, 0, 0,0.15);
+    padding: 5px 0;
+    border-radius: 6px;
+background-color: aquamarine; 
+transform: scale(0);
+transform-origin: bottom right;
+transition: transform 0.3s ease;
+
+
+
+
+}
+
+.settings.show .menu{
+    transform: scale(1);
+
+
+}
+
+.popup-box
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 100;
+}
+
+
+.popup-box .popup{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    z-index: 1000;
+    width: 100%;
+    max-width: 470px;
+
+    transform: translate(-50%,-50%);
+}
+
+.popup-box .popup,.popup-box
+{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0,5s ease;
+}
+
+
+.popup-box.show .popup,.popup-box.show
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup .content{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.popup .content header
+{
+border-bottom: 1px solid #ccc;
+padding: 15px 25px;
+display: flex;
+justify-content: center;
+justify-content: space-between;
+position: relative;
+}
+
+
+
+.content header p{
+
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+
+.content header i{
+    color: #575757;
+    cursor: pointer;
+    font-size: 23px;
+  transition: all 0.3s ease; 
+position: absolute;
+  width: 19p;
+  height: 22px;
+  line-height: 6px;
+  bottom: 35px;
+  right: 5px;
+
+
+}
+
+header i:hover
+{
+   background-color: #cb2525; 
+   color:#f9eeee;
+   border-radius:50%;
+   transform: scale(1.1);
+   
+ 
+
+}
+.content form{
+    margin: 15px 25px 35px;
+}
+.content form .row
+{
+    margin-bottom: 20px;
+}
+
+.form .row label
+{
+    display: block;
+    font-size: 8px;
+    margin-bottom: 6px;
+}
+
+.content form :where(input,textarea)
+{
+outline: none;
+height: 50px;
+font-size: 17px;
+padding: 0 15px;
+width: 100%;
+border-radius: 4px;
+border: 1px solid #999;
+}
+
+
+.content form textarea
+{
+    height: 150px;
+    resize:  none;
+    padding: 8px 15px;
+}
+
+.content form button
+{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    height: 50px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: #6a93f8; 
+    
+    
+}
+
+
